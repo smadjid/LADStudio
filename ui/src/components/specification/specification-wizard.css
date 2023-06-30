@@ -1,0 +1,131 @@
+specification-wizard {
+  margin: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.box {
+  width: 99%;
+  margin-left: 0.35%;
+  border: 1px solid #ddd;
+
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 0.1rem;
+  background-color: #1e1f26 !important;
+}
+.box .steps {
+  border-bottom: 1px solid #ddd;
+}
+.box .steps ul {
+  overflow: hidden;
+}
+.box .steps ul li div {
+  color: #999;
+  padding: 10px 0 15px 45px;
+  position: relative;
+  background: #2c3e50;
+}
+.box .steps ul li div span {
+  font-size: 13px;
+}
+.box .steps ul li:first-child div {
+  width: auto;
+  padding-left: 15px;
+}
+.box .steps ul li div::before {
+  content: " ";
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #ddd;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 1;
+  margin-left: 1px;
+}
+.box .steps ul li div::after {
+  content: " ";
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #2c3e50;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+.box .steps ul li.done div {
+  cursor: pointer;
+  border-color: #2c3e50 !important;
+  color: #fff !important;
+  background: #2c3e50 !important;
+}
+.box .steps ul li.done div::after {
+  border-left: 30px solid #2c3e50;
+}
+.box .steps ul li.active div {
+  cursor: auto;
+  border-color: #22313f !important;
+  color: #fff !important;
+  background: #22313f !important;
+}
+.box .steps ul li.active div::after {
+  border-left: 30px solid #22313f;
+}
+
+.box .steps ul li:nth-child(1),.box .steps ul li:nth-child(2) {  
+  border-top:solid  #ffa5008f!important;
+}
+.box .steps ul li:nth-child(3), .box .steps ul li:nth-child(4),.box .steps ul li:nth-child(5) {  
+  border-top:solid  #08a2c4d9!important
+}
+.box .steps ul li:nth-child(6),.box .steps ul li:nth-child(7){
+  border-top:solid  #8ab646ad!important
+}
+
+.box .step-component {
+  padding: 2px;
+  padding-top: 20px;
+  min-height: 90%;
+  /*display: flex;*/
+ text-align: left;
+ font-size: medium;
+}
+
+.box .btn-component {
+  display: flex;
+  text-align: right;
+}
+
+.specification-footer {
+  background-color: #22313f45;
+}
+
+.list {
+  border: 1px solid blue;
+  }
+  .list-content {
+  padding: 24px 8px;
+  border-top: 1px solid gray;
+  background: rgba(200, 200, 200, 0.2);
+  }
+  .list-item {
+  padding: 8px 16px;
+  border: 1px solid gray;
+  margin-bottom: 8px;
+  background: rgb(200, 200, 200);
+  transition: background 0.1s;
+  }
+  .list-item:hover {
+  background: rgb(235, 235, 235);
+  }
+
+  .MuiFormControl-root{
+    width:90%;
+  }
+
+  

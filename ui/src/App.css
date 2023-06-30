@@ -1,0 +1,101 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css);
+
+.App {
+  text-align: center;
+}
+
+.App-logo {  
+  height: 8vmin;
+  pointer-events: none;
+  float: left;
+}
+
+.Inst-logo {  
+  height: 6vmin;
+  pointer-events: none;
+  float: right;
+  margin-right: 2vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+  /*  animation: App-logo-spin infinite 20s linear;*/
+  }
+}
+
+html {
+  height: 100%; 
+}
+
+body {
+  background-color: #1e2b41;
+  height: 100%; 
+}
+
+.App-header {
+  background-color: #26282c;
+  box-shadow:  0 5px 5px -2px rgb(0 0 0 / 20%);
+  /*min-height: 100vh;*/
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-bottom: 2vh;
+  margin-bottom: 3vh;
+}
+.main-head{
+  margin-top: 10px;
+
+}
+.App-main {
+ /*background-color: #282c34;*/
+  min-height: 60vh;
+  flex-direction: column;
+  /*align-items: center;*/
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  position: absolute;
+    height: 90%;
+    width: 100%;
+}
+
+footer {
+  /*background-color: #282c34;*/
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+   flex-direction: column;
+   /*align-items: center;*/
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+   color: white;
+ }
+ footer p{
+   width: 100%;
+   text-align: center;
+   right: 0;
+    left: 0;
+    font-size: calc(12px);
+ }
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.table tr td:last-child {
+  /* width: 1%; */
+  white-space: nowrap;
+}

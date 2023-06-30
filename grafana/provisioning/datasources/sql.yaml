@@ -1,0 +1,10 @@
+apiVersion: 1
+
+datasources:
+  - name: sqldb
+    type: mysql
+    url: maria:3306
+    database: edxdb
+    user: grafaner
+    secureJsonData:
+      password: grafaner

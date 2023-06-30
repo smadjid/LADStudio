@@ -1,0 +1,21 @@
+apiVersion: 1
+datasources:
+  - name: es
+    type: elasticsearch
+    editable: false
+    user: "elastic"
+    password: "elastic"
+    database: "edx*"
+    url: http://elasticsearch:9200
+    access: proxy
+    basicAuth: true
+    basic_auth_user: elastic
+    basic_auth_password: 'mypass'
+    user: elastic
+    editable: true
+    secureJsonData:
+      basic_auth_password: 'mypass'
+      basic_auth_user: elastic
+    jsonData:
+      esVersion: 70
+      timeField: "timestamp"

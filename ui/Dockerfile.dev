@@ -1,0 +1,25 @@
+# Pull the Node image from Docker Hub
+FROM node:16-slim
+
+# Setting Working Directory
+WORKDIR /usr/app
+
+# Copying only package.json
+COPY package*.json ./
+
+# RESOLVE https://stackoverflow.com/questions/64573177/unable-to-resolve-dependency-tree-error-when-installing-npm-packages/64615583#64615583
+RUN npm config set legacy-peer-deps true
+
+# Install Dependencies
+RUN npm install
+
+# Copy rest of the code to container
+COPY . .
+
+EXPOSE 3000
+
+# Run the React app
+CMD ["npm", "start"]
+
+
+

@@ -1,0 +1,142 @@
+.interface {
+  display: flex;
+  flex-direction: row;
+}
+
+.interface .sideBar {
+  flex: 0 0 1;
+  width: 200px;
+  padding: 10px;
+  border-right: 1px solid #111;
+  height: 100vh;
+  background: #e1e1e1;
+  margin-right: 2vh;
+}
+
+.interface .sideBarItem {
+  border-radius: 3px;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: move;
+  
+}
+
+
+.interface .pageOLD {
+  flex: 1 1 auto;
+  padding: 0 20px;
+  margin: 20px;
+  border: 1px solid green;
+}
+
+.interface .dropZone {
+  flex: 0 0 auto;
+  height: 40px;
+  transition: 200ms all;
+  background: repeating-linear-gradient(to right, rgba(102, 100, 100, 0.3) 0,
+  rgba(0,0,0,0.3) 1px, rgba(255,255,255,0) .5px,
+  rgba(255,255,255,0) 3px);
+  background-position:center;
+  background-size: 30% 2px,1px 30%; 
+  background-repeat:no-repeat;
+  ;
+}
+
+.interface .dropZone:nth-of-type(2n) {
+  display: none;
+}
+
+.interface .dropZone.horizontalDrag {
+  width: 40px;
+  height: auto;
+  display:inline-block;
+  width:50px;
+  height:50px;
+}
+
+.interface .dropZone:not(.horizontalDrag).isLast {
+  flex: 1 1 auto;
+}
+
+.interface .dropZone.active,
+.interface .trashDropZone.active {
+  background: #00a2ff;
+  transition: 100ms all;
+}
+
+.interface .framebox {
+  height: 50px;
+  padding: 10px;
+  background-color: rgb(219, 209, 209);
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.interface .framebox:hover {
+  box-shadow: 2px 2px 4px 2px rgb(114, 9, 9);
+}
+
+.interface .row {
+  background-color: rgb(219, 209, 209);
+  padding: 0;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.interface .row:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.interface .column {
+  flex: 1 1 100%;
+  padding: 1vh;
+  background-color: rgb(162, 162, 190);
+  padding: 0;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.interface .column:hover {
+  box-shadow: 2px 2px 4px 2px rgb(68, 37, 37);
+}
+
+.interface .columns {
+  display: flex;
+  padding: 2vh 0;
+}
+
+.interface .columnContainer {
+  display: flex;
+}
+
+.interface .base {
+  padding: 0.5rem 1rem;
+  color: red;
+  cursor: move;
+}
+
+.interface .trashDropZone {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  color:red;
+  width: fit-content;
+  height: auto;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  cursor: default;
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interface .pageContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.tabs button{
+  border: none;
+}

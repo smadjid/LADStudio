@@ -1,0 +1,23 @@
+"id";"title";"description";"indicator_id";"visualization_id";"request";"sample";"ws_id"
+48;"New";"Ce panel permet de voir ceci avec cela";206;21;"";"at41";1
+49;"A Panel";"Description";206;21;"";"at41";1
+50;"Testing";"Description";698;22;"";"at41";1
+51;"Comparing ";"Description";702;18;"SELECT name as Nom, count(*) as NB, now() as time FROM logs WHERE activity_class = 'Système'  group by name order by 2 desc limit 5";"at41";1
+52;"Global View";"Description";204;13;"SELECT Time(timestamp)  as 'Hour', SUBSTRING(content, 1, 20) as 'Act.', SUBSTRING(name, 1, 20) as 'Tool', TIME_FORMAT(dur, '%H:%i:%s') as 'Duration' FROM logs WHERE log_type = 'keystrokes' and activity_class='Information-Documentation' order by timestamp";"at41";1
+53;"More comparison";"Description";204;9;"SELECT   timestamp AS time, count(*) nb_actions FROM logs WHERE   $__timeFilter(timestamp)   GROUP by time ORDER BY timestamp";"at41";1
+54;"Percent of people like this";"Description";204;26;"SELECT st_name, count(*), now() as time FROM logs WHERE activity_class = 'Système'  group by name order by 2 desc limit 5";"at41";1
+55;"New";"Description";204;42;"";"at41";1
+56;"New";"";204;7;"select * from tab";"at41";1
+57;"Working time";"Description";204;7;"";"lada";2
+58;"Chances of success";"Description";204;72;"SELECT  now() AS time,  chances FROM lada_predict";"lada";2
+59;"Prediction Quality";"";204;72;"SELECT  now() AS time,  quality FROM lada_predict";"lada";2
+60;"The prediction seems";"Description";204;74;"SELECT  now() AS time,   quality FROM lada_predict";"lada";2
+61;"The chance of success of the student is ...";"Description";204;74;"SELECT  now() AS time,   chances FROM lada_predict";"lada";2
+62;"Course results";"Description";204;75;"SELECT code, title, grade, year, status FROM lada_student_courses ORDER BY code";"lada";2
+64;"Advancement rate";"Description";204;9;"SELECT concat(title, ' (',code, ')'), achieved*100/plan as percent FROM lada_student_courses ORDER BY code";"lada";2
+65;"Grade comparison";"Description";204;14;"select * from  (SELECT id student , grade  FROM at41.lada_students_grades) a  CROSS JOIN (SELECT  id thestudent , grade thegrade  FROM at41.lada_students_grades where id=19) b";"lada";2
+66;"Historical records";"Description";204;29;"SELECT  UNIX_TIMESTAMP(STR_TO_DATE(date,'%d/%m/%Y') ) time, count FROM lada_historical";"lada";2
+67;"Comparative grades";"Description";204;31;"SELECT title, student_skills, similar_student_skills, course_skills FROM lada_student_courses";"lada";2
+68;"Student's skills";"Description";204;19;"SELECT title, student_skills, course_skills FROM lada_student_courses limit 5";"";2
+69;"Similar Students' skills";"Description";204;19;"SELECT title, similar_student_skills, course_skills FROM lada_student_courses limit 5";"";2
+70;"New";"Description";204;7;"";"";3
