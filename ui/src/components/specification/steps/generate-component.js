@@ -231,9 +231,7 @@ const GenerateComponent = () => {
     getVisualizations();
   }, []);
 
-  const filename = "generated_dashboard";
-  const fileData = JSON.stringify(dash);
-  const blob = new Blob([fileData], { type: "text/plain" });
+  
 
   const [mainPanel, setMainPanel] = useState();
   const [comprehensionFrames, setComprehensionFrames] = useState([]);
@@ -425,6 +423,21 @@ console.log(params.type)
     });
   };
   const saveJSonFile = () => {
+    const filename = "generated_dashboard";
+    let dash = generateDashStructure();
+    generateMeta();
+    let p = [];
+    p = p.concat(dash);
+    const f = { ...file, ...dashMeta };
+    
+    
+    const fileData = JSON.stringify({ ...file, ...dashMeta, panels: p });
+    setFile({ ...file, ...dashMeta, panels: p });
+    console.log(file)
+
+    const blob = new Blob([fileData], { type: "text/plain" });
+
+
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.download = `${filename}.json`;

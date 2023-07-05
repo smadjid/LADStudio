@@ -26,15 +26,26 @@ const ToGrafana = (props) => {
       Accept: "application/json",
       Authorization: "Bearer " + instanceKey,
     };
-    console.log(instanceURL);
-    console.log(instanceKey); 
-    let domain = (new URL(instanceURL));console.log(domain.origin); 
+
+    let grafana_url = "/grafana"
+    let domain = "http://localhost:3000"
+
+    if(instanceURL !== ""){
+      domain = (new URL(instanceURL));
+      domain = domain.origin
+      grafana_url = instanceURL
+
+    }
+    
+    
+    // let domain =  (new URL(instanceURL));
+    // console.log(domain.origin); 
     axios
-      .post(instanceURL + "/api/dashboards/db", dashboard, { headers })
-     // .post("/api/dashboards/db", dashboard, { headers })
+      .post(grafana_url + "/api/dashboards/db", dashboard, { headers })
       .then((res) => {
         
-        setDashboardURL(domain.origin + res.data.url);
+        setDashboardURL(res.data.url);
+        setDashboardURL(domain + res.data.url);
         setQueryStatus(
           "The dashboard is generated and integrated successfully"
         );
@@ -85,7 +96,7 @@ const ToGrafana = (props) => {
               </td>
             </tr>
             <tr>
-              <td>Instance URL</td>
+              <td>Instance URL <br/>(leave blank for internal instance)</td>
               <td>
                 <input
                   type="text"
@@ -97,6 +108,7 @@ const ToGrafana = (props) => {
                   }}
                   required
                 />
+                
               </td>
             </tr>
             <tr>

@@ -12,8 +12,13 @@ module.exports = function(app) {
   app.use(
     '/grafana',
     createProxyMiddleware('/grafana',{
-      target: "http://grafalab:3030",
-      changeOrigin: true,
+      target: "http://grafalab:3000",
+      secure: false,
+      Connection: "keep-alive",
+      changeOrigin: false,
+      pathRewrite: {
+        '^/grafana':''
+      }
     })
   );
 

@@ -1,0 +1,36 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "community",
+  "signedByOrg": "grafana",
+  "signedByOrgName": "Grafana Labs",
+  "plugin": "farski-blendstat-panel",
+  "version": "1.0.3",
+  "time": 1622740901104,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "module.html": "8e50a36c78944c7581b38f34f233b219f18491308853a9d7fcc49096d875da75",
+    "blending.html": "42e68b029ac4ccace0a6b3022a6c31a3ccec894139915118b8144cefbad47496",
+    "editor.html": "b091a9e000cccb9eda4c721636e095e180ba58b771736a6bdd78c1928be3d176",
+    "plugin.json": "36998bc53fcfd2cd55f3c6d9b6aadc0a33cda653b2c1b6e73aca65a97fac22ca",
+    "README.md": "4ac43bdc2cbd45f64328378e7cbff4edb533e01a6796e4f4acabb51339efacd5",
+    "img/icn-blendstat-panel.svg": "e976b4f28da2ff6e450ff7d93b6e976e316825f4a699e9ce1d07b66d38752800",
+    "mappings.html": "09ae11912a99e310326b311a130d9c9114a7a342136bb2f1c5a69efa29a98f51",
+    "module.js": "372a3c71d6f35ec585dc3725e2b7ce34240b7f533e3a379cefbaaeccde756266",
+    "lib/flot/jquery.flot.gauge.js": "44a9ff49252c0d2d0b675ca61312cf21bc1d0005ee0fb88e3c2be59bfc3bebc3",
+    "module.d.ts": "2c69f3a89e43fbe93e00e6ec68b735d56f7ce6b7c1deb0183260fd151deb297a"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.1
+Comment: https://openpgpjs.org
+
+wqEEARMKAAYFAmC5D6UACgkQfk0ManCIZucv2QIJAUqUUvt4MqCrBjyvjc+V
+yvdvl/GCNp2XLLypIPRUcSSq8s3OUgxhdSGlu1/l0DUhLe/e15l9pJG9oyai
+aPKznc9RAgi+G4GnS81wbVswxbfszUwSLDtS4NIgzyhI6EVR2gWtkK9jNFef
+EHNigdQyqciL5cCG6blhUuToP8HdGWDjI64Epw==
+=kiSo
+-----END PGP SIGNATURE-----

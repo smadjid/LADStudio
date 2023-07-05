@@ -34,7 +34,7 @@ LADStudio generates running prototypes based on the LAD specifications, which us
 
 To run LADStudio locally, you need to have Docker and Docker Compose installed on your machine. Then, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/smadjid/ladstudio.git`
+1. Clone this repository
 2. Navigate to the project directory: `cd ladstudio`
 3. Create a `.env` file with the following variables:
 MYSQL_ROOT_PASSWORD=<your_mysql_root_password>
@@ -46,8 +46,3 @@ GRAFANA_ADMIN_PASSWORD=<your_grafana_admin_password>
 4. Run `docker-compose up -d` to start the containers
 5. Open `http://localhost:3000` in your browser to access the LADStudio UI
 6. Open `http://localhost:3030` in your browser to access the Grafana dashboard
-
-
-
-LADStudio is licensed under the MIT License.
-
